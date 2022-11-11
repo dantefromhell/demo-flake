@@ -8,12 +8,15 @@
 
       mysystem = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        networking.hostName = "mysystem";
+        
+        config = {
+          networking.hostName = "mysystem";
 
-        boot.loader.systemd-boot.enable = true;
+          boot.loader.systemd-boot.enable = true;
 
-        services.sshd.enable = true;
-        users.users.root.openssh.authorizedKeys.keys = [ "sk-ecdsa-sha2-nistp256@openssh.com AAAAInNrLWVjZHNhLXNoYTItbmlzdHAyNTZAb3BlbnNzaC5jb20AAAAIbmlzdHAyNTYAAABBBPKBVrtVHb2Y8L2ntrjF8R6zF06WF+fP49YcJglgXLPwqSWwCE+osLz/ylDPTcufznhz72qFswB25r74HSGUSLwAAAAEc3NoOg== HTZ__nix-dabei__dante" ];
+          services.sshd.enable = true;
+          users.users.root.openssh.authorizedKeys.keys = [ "sk-ecdsa-sha2-nistp256@openssh.com AAAAInNrLWVjZHNhLXNoYTItbmlzdHAyNTZAb3BlbnNzaC5jb20AAAAIbmlzdHAyNTYAAABBBPKBVrtVHb2Y8L2ntrjF8R6zF06WF+fP49YcJglgXLPwqSWwCE+osLz/ylDPTcufznhz72qFswB25r74HSGUSLwAAAAEc3NoOg== HTZ__nix-dabei__dante" ];
+        };
       };
     };
   };

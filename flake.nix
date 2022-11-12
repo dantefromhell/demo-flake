@@ -12,7 +12,7 @@
           networking.hostId = builtins.substring 0 8 (builtins.hashString "sha256" "0xdeadbeef");
           system.stateVersion = "22.11";
 
-          boot.loader.systemd-boot.enable = true;
+          boot.loader.grub.enable = true;
           fileSystems = {
             "/" = {
               device = "rpool/local/root";

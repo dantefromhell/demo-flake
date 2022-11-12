@@ -13,7 +13,6 @@
           system.stateVersion = "22.11";
 
           boot.loader.systemd-boot.enable = true;
-          boot.tmpOnTmpfs = true;
           fileSystems = {
             "/" = {
               device = "rpool/local/root";

@@ -12,7 +12,10 @@
           networking.hostId = builtins.substring 0 8 (builtins.hashString "sha256" "0xdeadbeef");
           system.stateVersion = "22.11";
 
-          boot.loader.grub.enable = true;
+          boot.loader.grub = {
+            enable = true;
+            devices = [ "/dev/sda" ];
+          };
           fileSystems = {
             "/" = {
               device = "rpool/local/root";

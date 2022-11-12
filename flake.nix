@@ -5,11 +5,11 @@
 
   outputs = { self,  nixpkgs }: {
     nixosConfigurations = {
-      mysystem = nixpkgs.lib.nixosSystem {
+      nix-dabei = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ({ ... }: {
-          networking.hostName = "mysystem";
-          networking.hostId = builtins.substring 0 8 (builtins.hashString "sha256" "0xdeadbeef");
+          networking.hostName = "nix-dabei";
+          networking.hostId = builtins.substring 0 8 (builtins.hashString "sha256" "nix-dabei");
           system.stateVersion = "22.11";
 
           boot.loader.grub = {

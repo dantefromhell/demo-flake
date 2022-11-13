@@ -49,7 +49,8 @@
               enable = true;
               devices = [ bootDisk ];
             };
-          zfs.devNodes = "/dev/disk/by-partlabel/zfs";
+            supportedFilesystems = [ "zfs" ];
+            zfs.devNodes = "/dev/disk/by-partlabel/zfs";
           };
           fileSystems = {
             "/" = {

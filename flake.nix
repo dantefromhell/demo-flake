@@ -45,7 +45,7 @@
           system.stateVersion = "22.11";
 
           boot = { 
-            kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+            initrd.availableKernelModules = [ "ata_piix" "sd_mod" "sr_mod" "ahci" "nvme" ];
             loader.grub = {
               enable = true;
               devices = [ bootDisk ];

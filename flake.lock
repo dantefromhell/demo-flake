@@ -1,12 +1,70 @@
 {
   "nodes": {
+    "disko": {
+      "inputs": {
+        "nixpkgs": [
+          "nix-dabei",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1664875822,
+        "narHash": "sha256-90bBm7tqXeKSGcnJ0NdtrNyUa2LlPCRm51rSLG97/rk=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "c96ccd7d9fb48b8283e84811c2355a3c39bb2a52",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "master",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
+    "nix-dabei": {
+      "inputs": {
+        "disko": "disko",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1668252942,
+        "narHash": "sha256-MKT4NBOst7E4O1zpu1OJkEroS+TSUIbcE0v0H7KsXAk=",
+        "owner": "dep-sys",
+        "repo": "nix-dabei",
+        "rev": "83259a39ff6a31a0d4aa46e19a25ae9326cc0709",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dep-sys",
+        "ref": "kexec",
+        "repo": "nix-dabei",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1667991831,
-        "narHash": "sha256-DHgEsLZI044B9T4AjA3K6+yB9/DqLr4dyA7OIx0FG7o=",
+        "lastModified": 1666557900,
+        "narHash": "sha256-+YD2TQ2GRjXDbwFbqZXTNEAsGC4F/GAjSWViwQGX/dg=",
+        "owner": "phaer",
+        "repo": "nixpkgs",
+        "rev": "f269d2b071262eff58cca14d63ae47110a87fb26",
+        "type": "github"
+      },
+      "original": {
+        "owner": "phaer",
+        "ref": "nix-dabei",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1668087632,
+        "narHash": "sha256-T/cUx44aYDuLMFfaiVpMdTjL4kpG7bh0VkN6JEM78/E=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "872fceeed60ae6b7766cc0a4cd5bf5901b9098ec",
+        "rev": "5f588eb4a958f1a526ed8da02d6ea1bea0047b9f",
         "type": "github"
       },
       "original": {
@@ -18,7 +76,8 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nix-dabei": "nix-dabei",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

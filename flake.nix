@@ -47,6 +47,7 @@
           boot.loader.grub = {
             enable = true;
             devices = [ bootDisk ];
+            zfs.devNodes = "/dev/disk/by-partlablel";
           };
           fileSystems = {
             "/" = {

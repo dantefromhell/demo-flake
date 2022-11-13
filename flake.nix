@@ -13,7 +13,8 @@
     nix-dabei.url = "github:dep-sys/nix-dabei/kexec";
   };
 
-  outputs = { self, nix-dabei, nixpkgs }: let
+  outputs = { self, nix-dabei, nixpkgs }: 
+  let
     sshKeys = [ "sk-ecdsa-sha2-nistp256@openssh.com AAAAInNrLWVjZHNhLXNoYTItbmlzdHAyNTZAb3BlbnNzaC5jb20AAAAIbmlzdHAyNTYAAABBBPKBVrtVHb2Y8L2ntrjF8R6zF06WF+fP49YcJglgXLPwqSWwCE+osLz/ylDPTcufznhz72qFswB25r74HSGUSLwAAAAEc3NoOg== HTZ__nix-dabei__dante" ];
     bootDisk = "/dev/sda";
   in {
@@ -34,7 +35,7 @@
       ] ).config.system.build.kexec;
 
 
-    # Systems to configure/ deploy.
+    # System(s) to configure/ deploy.
     nixosConfigurations = {
       nix-dabei-demo = ( nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

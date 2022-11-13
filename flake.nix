@@ -45,6 +45,7 @@
           system.stateVersion = "22.11";
 
           boot = { 
+            kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
             loader.grub = {
               enable = true;
               devices = [ bootDisk ];

@@ -44,10 +44,12 @@
           networking.hostId = builtins.substring 0 8 (builtins.hashString "sha256" "nix-dabei-demo");
           system.stateVersion = "22.11";
 
-          boot.loader.grub = {
-            enable = true;
-            devices = [ bootDisk ];
-            zfs.devNodes = "/dev/disk/by-by-partlabel";
+          boot = { 
+            loader.grub = {
+              enable = true;
+              devices = [ bootDisk ];
+            };
+          zfs.devNodes = "/dev/disk/by-by-partlabel";
           };
           fileSystems = {
             "/" = {

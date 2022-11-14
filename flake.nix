@@ -30,6 +30,7 @@
               diskDevice = bootDisk;
             };
             users.users.root.openssh.authorizedKeys.keys = sshKeys;
+            users.users.root.initialPassword = "toor";
           };
         })
       ] ).config.system.build.kexec;

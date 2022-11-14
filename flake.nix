@@ -46,7 +46,7 @@
 
           boot = { 
             initrd = {
-              availableKernelModules = [ "virtio-pci" "virtio_scsi" "ata_piix" "sd_mod" "sr_mod" "ahci" "nvme" ];
+              availableKernelModules = [ "virtio_scsi" "ata_piix" "sd_mod" "sr_mod" "ahci" "nvme" ];
               network.ssh.enable = true;
               network.ssh.authorizedKeys = sshKeys;
             };  

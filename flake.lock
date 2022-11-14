@@ -28,11 +28,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1668252942,
-        "narHash": "sha256-MKT4NBOst7E4O1zpu1OJkEroS+TSUIbcE0v0H7KsXAk=",
+        "lastModified": 1668365712,
+        "narHash": "sha256-tS56GfwB/Yk53XzCFs6ijALTzUZyYGKNj8UdCMePZ+s=",
         "owner": "dep-sys",
         "repo": "nix-dabei",
-        "rev": "83259a39ff6a31a0d4aa46e19a25ae9326cc0709",
+        "rev": "71c768a5de73532e62cde889bd8982d1da422423",
         "type": "github"
       },
       "original": {

@@ -45,7 +45,11 @@
           system.stateVersion = "22.11";
 
           boot = { 
-            initrd.availableKernelModules = [ "virtio-pci" "virtio_scsi" "ata_piix" "sd_mod" "sr_mod" "ahci" "nvme" ];
+            initrd = {
+              availableKernelModules = [ "virtio-pci" "virtio_scsi" "ata_piix" "sd_mod" "sr_mod" "ahci" "nvme" ];
+              network.ssh.enable = true;
+              network.ssh.authorizedKeys = sshKeys;
+            };  
             loader.grub = {
               enable = true;
               devices = [ bootDisk ];

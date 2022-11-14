@@ -71,10 +71,10 @@
               device = "rpool/local/nix";
               fsType = "zfs";
             };
-            "/home" = {
-              device = "rpool/safe/home";
-              fsType = "zfs";
-            };
+#            "/home" = {
+#              device = "rpool/safe/home";
+#              fsType = "zfs";
+#            };
           };
 
           services.sshd.enable = true;
